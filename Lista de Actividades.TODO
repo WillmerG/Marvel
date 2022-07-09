@@ -1,0 +1,107 @@
+willme1127914665
+Your public key
+82d79c52eda67fd2c6bbec1d4f8aa6db
+Your private key
+2fd8415db2ee14f82e3157d2d28c9744510144b1
+
+SITE NAVIGATION:
+  ☐ 1. As a user, I want to see all the sections of the site which are COMICS, CHARACTERS, CREATORS and SERIES.
+
+CHARACTERS LIST PAGE:
+  ☐ 1. As a user, I want to see all the characters of the Marvel universe of comics. (As you might think the API returns a lot of haracters so to complete this task you must provide a complete pagination or infinite scroll to somehow view all the characters available)
+
+  ☐ 2. As a user, I want to see the image of the character, the number of comics that the character appears in and the number of series as well. All of that without going to the character details.
+
+  ☐ 3. As a user, I want to search a character by the first letter of the name. So I want to see the abecedary to choose a letter and then view only the characters whose name begins with that letter.
+
+  ☐ 4. As a user, I want to type the name of a character and view the list updating according to my criteria.
+
+  ☐ 5. As a user, I want to click the character so that I can view the character details.
+
+CHARACTERS DETAILS PAGE:
+  ☐ 1. As a user, I want to see the character image.
+
+  ☐ 2. As a user, I want to see the character description. If there is no description, I want to know that the description is not available.
+
+  ☐ 3. As a user, I want to see a list of the comics in which the character appears (with the cover, title, writer, the author of the cover and the price of the comic. If there is more than one writer, take the first one)
+
+  ☐ 4. As a user, I want to see all the comics about the character so I want to be linked to the comics list page pre-filtered with the comics of the character I’m watching
+
+  ☐ 5. As a user, I want to see about the character, the series in which appears (with the picture, title, starting year, ending year, type and rating of the serie)
+
+  ☐ 6. As a user, I want to see all the series about the character so I want to be linked to the series list page pre-filtered with the series of the character I’m watching.
+
+COMICS LIST PAGE:
+  ☐ 1. As a user, I want to see all the comics of Marvel. (Again, the API returns a lot of comics so to complete this task you must provide a full pagination or infinite scroll)
+
+  ☐ 2. As a user, I want to see for each comic the cover image, the title, the writer, the author of the cover and the price of the comic. (If there is more than one writer, take the first one).
+
+  ☐ 3. As a user, I want to type the name of a comic and view the list updating according to my criteria.
+
+  ☐ 4. As a user, I want to order the list of comics by price (ascending or descending).
+
+  ☐ 5. As a user, I want to order the list of comics by title (ascending or descending).
+
+  ☐ 6. As a user, I want to view the comics that groups several characters. So I want to be able to select a group of characters and view the comics in which all the characters I selected appear together. (Ex: Thor Iron Man and Hulk will show me the comics in which all those three characters appear)
+
+  ☐ 7. As a user, I want to see the description of the comic without taking me to the comic details.
+
+  ☐ 8. As a user, I want to click the comic cover so that I can view the character details.
+
+COMIC DETAIL PAGE:
+  ☐ 1. As a user, I want to see the cover of the comic.
+
+  ☐ 2. As a user, I want to see the description of the comic.
+
+  ☐ 3. As a user, I want to see a list of the characters' names that appear in the comic. (Each name should be clickable so I can be taken to the character details of each one).
+
+  ☐ 4. As a user, I want to see a list of the creators of the comic with the role of the creator. (Each creator item should be clickable so I can be taken to the details of the creator).
+
+  ☐ 5. As a user, I want to see the price of the comic.
+
+  ☐ 6. As a user, I want to see a list of suggested comics based on the comic I’m watching. (Each suggested comic must have the cover image, the title, the writer, the author of the cover and the price of the comic, and should be clickable so I can view the details of the comic by clicking on).
+
+CREATORS LIST PAGE:
+  ☐ 1. As a user, I want to see all the creators of Marvel comics and series. (Remember to provide a complete pagination or infinite scroll for the creators)
+
+  ☐ 2. As a user, I want to see for each creator, the image, the number of comics in which the creator participated and the number of series as well.
+
+  ☐ 3. As a user, I want to type the name of one creator and view the list updating according to my criteria.
+
+  ☐ 4. As a user, I want to click the creator item so that I can be taken to the details page of the creator.
+
+CREATORS DETAILS PAGE:
+  ☐ 1. As a user, I want to see the image of the creator.
+
+  ☐ 2. As a user, I want to see the first name, middle name, last name and full name of the creator.
+
+  ☐ 3. As a user, I want to see the comics in which the creator participated, with the cover, title, price of the comic and the creator with his role in that comic. (This comics must be clickable so I can be taken to the details of the comic)
+
+  ☐ 4. As a user, I want to see the series in which the creator participated, with the image, title, type, rating, and the creator with his role in that series.
+
+  ☐ 5. As a user, I want to see all the comics in which the creator participated so I want to be linked to the comics list page pre-filtered with the comics of the creator I'm watching.
+
+SERIES LIST PAGE:
+  ☐ 1. As a user, I want to see all the series of Marvel. (Remember to provide a complete pagination or infinite scroll for this list)
+
+  ☐ 2. As a user, I want to see for each series, the image, the title, the writer, starting year, ending year, type and rating.
+
+  ☐ 3. As a user, I want to type the name of one series and view the list updating according to my criteria.
+
+  ☐ 4. As a user, I want to filter the series by the series type (Collection, Limited, One Shot, Ongoing).
+
+  ☐ 5. As a user, I want to filter the series by the series rating (T, T+, PSR, Marvel PSR)
+
+  ☐ 6. As a user, I want to filter the series by the range of date from starting year until ending year.
+
+  ☐ 7. As a user, I want to see the synopsis of the series without taking me to the series details.
+
+EXTRA FEATURES:
+  ☐ 1. Home section with news of marvel. The API does not provide news. So create your own models, objects and service to provide a cool homepage to the site.
+
+  ☐ 2. Overall searcher that filters objects in all sections So If I type “Thor” I can view results from comics, series, character and creators.
+
+  ☐ 3. Deploy your site
+
+  ☐ 4. Use compodoc to add documentation.
+
