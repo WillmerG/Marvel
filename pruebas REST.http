@@ -1,0 +1,10 @@
+# para optener el Key md5(ts + privKey + pubKey) http://www.md5.cz/
+@url=https://gateway.marvel.com/v1/public/
+@key=ts=thesoer&apikey=82d79c52eda67fd2c6bbec1d4f8aa6db&hash=58fbf60781447408fcf22a3d8d1934e1
+###
+
+GET {{url}}characters?{{key}}
+
+{
+}
+###
