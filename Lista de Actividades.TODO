@@ -1,27 +1,21 @@
-willme1127914665
-Your public key
-82d79c52eda67fd2c6bbec1d4f8aa6db
-Your private key
-2fd8415db2ee14f82e3157d2d28c9744510144b1
-
 SITE NAVIGATION:
   ☐ 1. As a user, I want to see all the sections of the site which are COMICS, CHARACTERS, CREATORS and SERIES.
 
 CHARACTERS LIST PAGE:
-  ☐ 1. As a user, I want to see all the characters of the Marvel universe of comics. (As you might think the API returns a lot of haracters so to complete this task you must provide a complete pagination or infinite scroll to somehow view all the characters available)
+  ✔ 1. As a user, I want to see all the characters of the Marvel universe of comics. (As you might think the API returns a lot of haracters so to complete this task you must provide a complete pagination or infinite scroll to somehow view all the characters available) @done(10-07-2022 15:32)
 
-  ☐ 2. As a user, I want to see the image of the character, the number of comics that the character appears in and the number of series as well. All of that without going to the character details.
+  ✔ 2. As a user, I want to see the image of the character, the number of comics that the character appears in and the number of series as well. All of that without going to the character details. @done(10-07-2022 13:53)
 
-  ☐ 3. As a user, I want to search a character by the first letter of the name. So I want to see the abecedary to choose a letter and then view only the characters whose name begins with that letter.
+  ✔ 3. As a user, I want to search a character by the first letter of the name. So I want to see the abecedary to choose a letter and then view only the characters whose name begins with that letter. @done(10-07-2022 19:57)
 
-  ☐ 4. As a user, I want to type the name of a character and view the list updating according to my criteria.
+  ✔ 4. As a user, I want to type the name of a character and view the list updating according to my criteria. @done(10-07-2022 23:04)
 
-  ☐ 5. As a user, I want to click the character so that I can view the character details.
+  ✔ 5. As a user, I want to click the character so that I can view the character details. @done(11-07-2022 00:54)
 
 CHARACTERS DETAILS PAGE:
-  ☐ 1. As a user, I want to see the character image.
+  ✔ 1. As a user, I want to see the character image. @done(11-07-2022 01:07)
 
-  ☐ 2. As a user, I want to see the character description. If there is no description, I want to know that the description is not available.
+  ✔ 2. As a user, I want to see the character description. If there is no description, I want to know that the description is not available. @done(11-07-2022 01:21)
 
   ☐ 3. As a user, I want to see a list of the comics in which the character appears (with the cover, title, writer, the author of the cover and the price of the comic. If there is more than one writer, take the first one)
 

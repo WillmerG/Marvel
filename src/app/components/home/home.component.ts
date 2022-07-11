@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+import { ICharacterResult } from './../../interfaces/characters.interface';
+import { CharactersService } from './../../services/characters.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  characterResult: ICharacterResult[] = [];
+  nameHero = '';
 
-  ngOnInit(): void {
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    const pos = (document.documentElement.scrollTop || document.body.scrollTop) + 1300;
+    const max = (document.documentElement.scrollHeight || document.body.scrollHeight);
+
+    if ((pos > max) && (!this.charactersService.getLoading())) {
+      this.onRefresh(this.nameHero);
+    }
   }
 
+  constructor(
+    private charactersService: CharactersService
+  ) { }
+
+  ngOnInit(): void {
+    this.charactersService.setClearLoading();
+    this.onRefresh();
+  }
+
+  onRefresh(name: string = ''): void {
+    if (this.nameHero !== name) {
+      this.characterResult = [];
+      this.charactersService.setClearLoading();
+      this.nameHero = name;
+    }
+
+    this.charactersService.getCharacters(name).subscribe(data => {
+      this.characterResult.push(... data);
+    });
+  }
 }

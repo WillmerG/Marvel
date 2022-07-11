@@ -3,8 +3,6 @@
 @key=ts=thesoer&apikey=82d79c52eda67fd2c6bbec1d4f8aa6db&hash=58fbf60781447408fcf22a3d8d1934e1
 ###
 
-GET {{url}}characters?{{key}}
+GET {{url}}characters?limit=21&offset=0&{{key}}&nameStartsWith=A
 
-{
-}
 ###

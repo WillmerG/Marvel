@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ICharacterResult } from './../../interfaces/characters.interface';
 
 @Component({
   selector: 'app-card-character',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardCharacterComponent implements OnInit {
 
-  constructor() { }
+  @Input() character: ICharacterResult[] = [];
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  onClickDetails(id: number): void {
+    this.router.navigate(['/Character', id]);
+  }
 }

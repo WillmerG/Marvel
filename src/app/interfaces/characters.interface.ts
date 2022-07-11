@@ -13,69 +13,70 @@ export interface IParamCharacter {
   offset: number;
 }
 
-export interface CCharacter {
-  code:            number;
+export interface ICharacter {
+  code:            number | string;
+  message?:        string;
   status:          string;
   copyright:       string;
   attributionText: string;
   attributionHTML: string;
   etag:            string;
-  data:            Data;
+  data:            ICharacterData;
 }
 
-export interface Data {
+export interface ICharacterData {
   offset:  number;
   limit:   number;
   total:   number;
   count:   number;
-  results: Result[];
+  results: ICharacterResult[];
 }
 
-export interface Result {
+export interface ICharacterResult {
   id:          number;
   name:        string;
   description: string;
   modified:    string;
-  thumbnail:   Thumbnail;
+  thumbnail:   ICharacterThumbnail;
   resourceURI: string;
-  comics:      Comics;
-  series:      Comics;
-  stories:     Stories;
-  events:      Comics;
-  urls:        URL[];
+  comics:      ICharacterComics;
+  series:      ICharacterComics;
+  stories:     ICharacterStories;
+  events:      ICharacterComics;
+  urls:        ICharacterURL[];
 }
 
-export interface Comics {
+export interface ICharacterComics {
   available:     number;
   collectionURI: string;
-  items:         ComicsItem[];
+  items:         ICharacterComicsItem[];
   returned:      number;
 }
 
-export interface ComicsItem {
+export interface ICharacterComicsItem {
   resourceURI: string;
   name:        string;
 }
 
-export interface Stories {
+export interface ICharacterStories {
   available:     number;
   collectionURI: string;
-  items:         StoriesItem[];
+  items:         ICharacterStoriesItem[];
   returned:      number;
 }
 
-export interface StoriesItem {
+export interface ICharacterStoriesItem {
   resourceURI: string;
   name:        string;
   type:        string;
 }
 
-export interface Thumbnail {
+export interface ICharacterThumbnail {
   path:      string;
   extension: string;
 }
 
-export interface URL {
+export interface ICharacterURL {
   type: string;
   url:  string;
 }
