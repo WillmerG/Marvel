@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ICharacterResult } from './../../interfaces/characters.interface';
 import { CharactersService } from './../../services/characters.service';
 
@@ -14,7 +14,8 @@ export class CharactersDetailsComponent implements OnInit {
 
   constructor(
     private charactersService: CharactersService,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -26,4 +27,7 @@ export class CharactersDetailsComponent implements OnInit {
     });
   }
 
+  onHome(): void {
+    this.router.navigate(['/']);
+  }
 }

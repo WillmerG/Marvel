@@ -6,3 +6,7 @@
 GET {{url}}characters?limit=21&offset=0&{{key}}&nameStartsWith=A
 
 ###
+
+GET {{url}}comics?characters=1009146&limit=20&offset=0&{{key}}
+
+###
