@@ -1,3 +1,5 @@
+import { IComicResult } from './../../../../interfaces/comics.interface';
+import { ComicsService } from './../../../../services/comics.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICharacterResult } from '../../../../interfaces/characters.interface';
@@ -11,11 +13,13 @@ import { CharactersService } from './../../../../services/characters.service';
 export class CharactersDetailsComponent implements OnInit {
 
   characterResult: ICharacterResult[] = [];
+  comicResult: IComicResult[] = [];
 
   constructor(
-    private charactersService: CharactersService,
+    private router: Router,
     private activeRoute: ActivatedRoute,
-    private router: Router
+    private charactersService: CharactersService,
+    private comicsService: ComicsService
   ) { }
 
   ngOnInit(): void {
@@ -23,6 +27,13 @@ export class CharactersDetailsComponent implements OnInit {
 
     this.charactersService.getCharacters('', id).subscribe(data => {
       this.characterResult.push(... data);
+    });
+
+    this.comicsService.setClearLoading();
+    this.comicsService.getComics(id, '', 4).subscribe(data => {
+      console.log(data);
+
+      this.comicResult.push(... data);
     });
   }
 

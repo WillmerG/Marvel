@@ -1,11 +1,14 @@
-<section class="text-gray-400 bg-gray-900 body-font">
+<section class="text-gray-400 body-font" [ngClass]="{'bg-gray-800': descripVisible, 'bg-gray-900' : !descripVisible}">
   <div class="container px-5 py-5 mx-auto">
-    <div class="flex flex-col text-center w-full mb-10">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">List of Comics</h1>
+    <div class="flex flex-row w-full mb-10 justify-center">
+      <div class="sm:text-3xl text-2xl w-auto font-medium title-font text-white mb-0">
+        List of Comics
+      </div>
+      <button *ngIf="idCharacter > 0" class=" ml-2 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" (click)="onAll()">All</button>
     </div>
-    <div class="flex flex-wrap -m-4" *ngIf="comicResult.length > 0">
+    <div class="flex flex-wrap -m-4" *ngIf="comics.length > 0">
 
-      <div class="lg:w-1/4 sm:w-1/2 p-4" *ngFor="let comic of comicResult">
+      <div class="lg:w-1/4 sm:w-1/2 p-4" *ngFor="let comic of comics">
         <div class="flex relative">
           <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" [src]="comic.thumbnail.path | imgSuper:comic.thumbnail.extension">
           <div class="px-8 py-10 relative z-10 w-full h-96 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">
@@ -15,6 +18,11 @@
             <p><span>Letterer: <b>{{ comic.creators.items | creator:'letterer' }}</b></span></p>
             <p><span>Penciler: <b>{{ comic.creators.items | creator:'penciler' }}</b></span></p>
             <h2 class="tracking-widest text-sm title-font font-medium text-indigo-400 mb-1">Price: {{ comic.prices[0].price }}$</h2>
+
+            <div *ngIf="descripVisible">
+              <p>Description: </p>
+              <p><b>{{ comic.description | descrip:70 }}</b></p>
+            </div>
           </div>
         </div>
       </div>

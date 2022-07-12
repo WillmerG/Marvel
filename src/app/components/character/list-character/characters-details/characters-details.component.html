@@ -15,6 +15,6 @@
 </section>
 
 <div *ngIf="characterResult.length > 0">
-  <app-list-comics [idCharacter]="characterResult[0].id"></app-list-comics>
+  <app-list-comics [comics]="comicResult" [idCharacter]="characterResult[0].id"></app-list-comics>
   <app-list-series [idCharacter]="characterResult[0].id"></app-list-series>
 </div>

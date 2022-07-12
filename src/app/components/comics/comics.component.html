@@ -1,2 +1,3 @@
 <app-header [nav]="'Comics'"></app-header>
-<p>comics works!</p>
+<app-nav-bar-comics (SearchComics)="onRefresh($event)"></app-nav-bar-comics>
+<app-list-comics [comics]="comicResult" [descripVisible]="true"></app-list-comics>

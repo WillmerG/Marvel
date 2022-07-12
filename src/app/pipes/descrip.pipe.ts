@@ -5,9 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DescripPipe implements PipeTransform {
 
-  transform(value: string): string {
-    if (value.length > 0) {
-      return value;
+  transform(value: string | null, size: number = 0): string {
+    if (value !== null && value.trim().length > 0) {
+      if (size > 0) {
+        return value.substring(0, size);
+      } else {
+        return value;
+      }
     } else {
       return 'Description Is Not Available';
     }

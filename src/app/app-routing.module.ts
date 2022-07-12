@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'Character', component: CharacterComponent },
   { path: 'Character/:id', component: CharactersDetailsComponent },
   { path: 'Comics', component: ComicsComponent },
+  { path: 'Comics/:idCharacter', component: ComicsComponent },
   { path: '**', redirectTo: '/Character' },
 ];
 

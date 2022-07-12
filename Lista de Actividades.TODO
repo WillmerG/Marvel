@@ -19,26 +19,26 @@ CHARACTERS DETAILS PAGE:
 
   ✔ 3. As a user, I want to see a list of the comics in which the character appears (with the cover, title, writer, the author of the cover and the price of the comic. If there is more than one writer, take the first one) @done(11-07-2022 16:15)
 
-  ☐ 4. As a user, I want to see all the comics about the character so I want to be linked to the comics list page pre-filtered with the comics of the character I’m watching
+  ✔ 4. As a user, I want to see all the comics about the character so I want to be linked to the comics list page pre-filtered with the comics of the character I’m watching @done(12-07-2022 13:07)
 
   ✔ 5. As a user, I want to see about the character, the series in which appears (with the picture, title, starting year, ending year, type and rating of the serie) @done(11-07-2022 18:27)
 
   ☐ 6. As a user, I want to see all the series about the character so I want to be linked to the series list page pre-filtered with the series of the character I’m watching.
 
 COMICS LIST PAGE:
-  ☐ 1. As a user, I want to see all the comics of Marvel. (Again, the API returns a lot of comics so to complete this task you must provide a full pagination or infinite scroll)
+  ✔ 1. As a user, I want to see all the comics of Marvel. (Again, the API returns a lot of comics so to complete this task you must provide a full pagination or infinite scroll) @done(12-07-2022 10:43)
 
-  ☐ 2. As a user, I want to see for each comic the cover image, the title, the writer, the author of the cover and the price of the comic. (If there is more than one writer, take the first one).
+  ✔ 2. As a user, I want to see for each comic the cover image, the title, the writer, the author of the cover and the price of the comic. (If there is more than one writer, take the first one). @done(12-07-2022 10:42)
 
-  ☐ 3. As a user, I want to type the name of a comic and view the list updating according to my criteria.
+  ✔ 3. As a user, I want to type the name of a comic and view the list updating according to my criteria. @done(12-07-2022 13:09)
 
-  ☐ 4. As a user, I want to order the list of comics by price (ascending or descending).
+  ☐ 4. As a user, I want to order the list of comics by price (ascending or descending). @critical
 
   ☐ 5. As a user, I want to order the list of comics by title (ascending or descending).
 
   ☐ 6. As a user, I want to view the comics that groups several characters. So I want to be able to select a group of characters and view the comics in which all the characters I selected appear together. (Ex: Thor Iron Man and Hulk will show me the comics in which all those three characters appear)
 
-  ☐ 7. As a user, I want to see the description of the comic without taking me to the comic details.
+  ✔ 7. As a user, I want to see the description of the comic without taking me to the comic details. @done(12-07-2022 11:49)
 
   ☐ 8. As a user, I want to click the comic cover so that I can view the character details.
 

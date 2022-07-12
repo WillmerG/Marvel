@@ -17,12 +17,15 @@ export class ComicsService {
     private http: HttpClient
   ) { }
 
-  getComics(idCharacter: number): Observable<IComicResult[]>{
+  getComics(idCharacter: number = 0, title: string = '', limit: number = 20): Observable<IComicResult[]>{
     if (this.loading) {
       return of([]);
     }
 
-    const URLCharacter = `comics?characters=${idCharacter}&limit=20&offset=${this.page}&${environment.key}`;
+    const URLCharacter = `comics?${idCharacter > 0 ? 'characters='+idCharacter+'&' : ''}`+
+      `${title.length > 0 ? 'titleStartsWith='+title+'&' : ''}` +
+      `limit=${limit}&offset=${this.page}&${environment.key}`;
+
     this.loading = true;
 
     return this.http.get<IComic>(environment.URLMarvel + URLCharacter).pipe(
