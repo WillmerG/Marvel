@@ -21,7 +21,7 @@ export class NavBarCharacterComponent implements OnInit {
   }
 
   onSearch(letter: string): void {
-    document.querySelectorAll('app-header > nav > ul > li > a').forEach(val => {
+    document.querySelectorAll('app-nav-bar-character > nav > ul > li > a').forEach(val => {
       if ('id_letter_'+letter === val.id) {
         if (val.classList.toString().indexOf('bg-gray-600') === -1) {
           val.classList.add('bg-gray-600');

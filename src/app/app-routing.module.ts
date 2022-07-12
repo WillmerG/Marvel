@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CharactersDetailsComponent } from './components/character/card-character/characters-details/characters-details.component';
 import { CharacterComponent } from './components/character/character.component';
+import { CharactersDetailsComponent } from './components/character/list-character/characters-details/characters-details.component';
+import { ComicsComponent } from './components/comics/comics.component';
 
 const routes: Routes = [
-  { path: '', component: CharacterComponent },
+  { path: 'Character', component: CharacterComponent },
   { path: 'Character/:id', component: CharactersDetailsComponent },
+  { path: 'Comics', component: ComicsComponent },
+  { path: '**', redirectTo: '/Character' },
 ];
 
 @NgModule({

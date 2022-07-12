@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ISeriesResult } from './../../interfaces/series.interface';
-import { SeriesService } from '../../services/series.service';
+import { ISeriesResult } from './../../../interfaces/series.interface';
+import { SeriesService } from '../../../services/series.service';
 
 
 @Component({

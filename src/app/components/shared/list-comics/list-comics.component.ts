@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { IComicResult } from './../../interfaces/comics.interface';
-import { ComicsService } from './../../services/comics.service';
+import { IComicResult } from './../../../interfaces/comics.interface';
+import { ComicsService } from './../../../services/comics.service';
 
 @Component({
   selector: 'app-list-comics',

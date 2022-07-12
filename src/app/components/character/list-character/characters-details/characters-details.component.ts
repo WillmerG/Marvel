@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ICharacterResult } from '../../../../interfaces/characters.interface';
-import { CharactersService } from '../../../../services/characters.service';
+import { CharactersService } from './../../../../services/characters.service';
 
 @Component({
   selector: 'app-characters-details',
@@ -27,6 +27,6 @@ export class CharactersDetailsComponent implements OnInit {
   }
 
   onHome(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/Character']);
   }
 }

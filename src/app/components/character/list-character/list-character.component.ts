@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { ICharacterResult } from '../../../interfaces/characters.interface';
 
 @Component({
-  selector: 'app-card-character',
-  templateUrl: './card-character.component.html',
-  styleUrls: ['./card-character.component.scss']
+  selector: 'app-list-character',
+  templateUrl: './list-character.component.html',
+  styleUrls: ['./list-character.component.scss']
 })
-export class CardCharacterComponent implements OnInit {
+export class ListCharacterComponent implements OnInit {
 
   @Input() character: ICharacterResult[] = [];
 

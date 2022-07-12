@@ -1,37 +1,41 @@
+import { CharactersDetailsComponent } from './character/list-character/characters-details/characters-details.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 
-import { CardCharacterComponent } from './character/card-character/card-character.component';
 import { ErrorInterceptor } from '../error/error.interceptor';
-import { ImgSuperPipe } from '../pipes/img-super.pipe';
-import { CharactersDetailsComponent } from './character/card-character/characters-details/characters-details.component';
 import { DescripPipe } from '../pipes/descrip.pipe';
-import { ListComicsComponent } from './list-comics/list-comics.component';
+import { ListComicsComponent } from './shared/list-comics/list-comics.component';
 import { CreatorPipe } from '../pipes/creator.pipe';
-import { ListSeriesComponent } from './list-series/list-series.component';
-import { SpinnerComponent } from './spinner/spinner.component';
+import { ListSeriesComponent } from './shared/list-series/list-series.component';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { CharacterComponent } from './character/character.component';
 import { NavBarCharacterComponent } from './character/nav-bar-character/nav-bar-character.component';
+import { HeaderComponent } from './header/header.component';
+import { ComicsComponent } from './comics/comics.component';
+import { ListCharacterComponent } from './character/list-character/list-character.component';
+import { ImgSuperPipe } from '../pipes/img-super.pipe';
 
 
 
 @NgModule({
   declarations: [
-    CardCharacterComponent,
-    CharacterComponent,
     ImgSuperPipe,
-    NavBarCharacterComponent,
-    CharactersDetailsComponent,
     DescripPipe,
-    ListComicsComponent,
     CreatorPipe,
+    CharacterComponent,
+    CharactersDetailsComponent,
+    NavBarCharacterComponent,
+    ListCharacterComponent,
+    ListComicsComponent,
     ListSeriesComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    HeaderComponent,
+    ComicsComponent
   ],
   exports: [
-    CharacterComponent
+    HeaderComponent
   ],
   imports: [
     CommonModule,

@@ -1,3 +1,4 @@
+<app-header [nav]="'Character'"></app-header>
 <app-nav-bar-character (SearchLetter)="onRefresh($event)"></app-nav-bar-character>
 
 <div class="bg-gray-800">
@@ -8,6 +9,6 @@
       </div>
     </div>
 
-    <app-card-character [character]="characterResult"></app-card-character>
+    <app-list-character [character]="characterResult"></app-list-character>
   </div>
 </div>
