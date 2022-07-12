@@ -1,11 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-nav-bar-character',
+  templateUrl: './nav-bar-character.component.html',
+  styleUrls: ['./nav-bar-character.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class NavBarCharacterComponent implements OnInit {
 
   letters: string[] = [];
   nameHero = '';

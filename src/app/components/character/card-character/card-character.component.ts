@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ICharacterResult } from './../../interfaces/characters.interface';
+import { ICharacterResult } from '../../../interfaces/characters.interface';
 
 @Component({
   selector: 'app-card-character',

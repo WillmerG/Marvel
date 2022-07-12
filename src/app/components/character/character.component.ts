@@ -1,13 +1,13 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { ICharacterResult } from './../../interfaces/characters.interface';
-import { CharactersService } from './../../services/characters.service';
+import { ICharacterResult } from '../../interfaces/characters.interface';
+import { CharactersService } from '../../services/characters.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-character',
+  templateUrl: './character.component.html',
+  styleUrls: ['./character.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class CharacterComponent implements OnInit {
 
   characterResult: ICharacterResult[] = [];
   nameHero = '';

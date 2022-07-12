@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ICharacterResult } from './../../interfaces/characters.interface';
-import { CharactersService } from './../../services/characters.service';
+import { ICharacterResult } from '../../../../interfaces/characters.interface';
+import { CharactersService } from '../../../../services/characters.service';
 
 @Component({
   selector: 'app-characters-details',
