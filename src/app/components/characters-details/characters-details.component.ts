@@ -23,7 +23,6 @@ export class CharactersDetailsComponent implements OnInit {
 
     this.charactersService.getCharacters('', id).subscribe(data => {
       this.characterResult.push(... data);
-      console.log(this.characterResult);
     });
   }
 

@@ -2,13 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of, tap } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
-import { IComic, IComicResult } from '../interfaces/comics.interface';
+import { ISeries, ISeriesResult } from '../interfaces/series.interface';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ComicsService {
+export class SeriesService {
 
   private loading = false;
   private page = 0;
@@ -17,15 +17,15 @@ export class ComicsService {
     private http: HttpClient
   ) { }
 
-  getComics(idCharacter: number): Observable<IComicResult[]>{
+  getSeries(idCharacter: number): Observable<ISeriesResult[]>{
     if (this.loading) {
       return of([]);
     }
 
-    const URLCharacter = `comics?characters=${idCharacter}&limit=20&offset=${this.page}&${environment.key}`;
+    const URLCharacter = `series?characters=${idCharacter}&limit=20&offset=${this.page}&${environment.key}`;
     this.loading = true;
 
-    return this.http.get<IComic>(environment.URLMarvel + URLCharacter).pipe(
+    return this.http.get<ISeries>(environment.URLMarvel + URLCharacter).pipe(
       map(result => result.data.results),
       tap(() => {
         this.page += 20;

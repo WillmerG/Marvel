@@ -10,6 +10,10 @@ import { ImgSuperPipe } from '../pipes/img-super.pipe';
 import { HeaderComponent } from './header/header.component';
 import { CharactersDetailsComponent } from './characters-details/characters-details.component';
 import { DescripPipe } from '../pipes/descrip.pipe';
+import { ListComicsComponent } from './list-comics/list-comics.component';
+import { CreatorPipe } from '../pipes/creator.pipe';
+import { ListSeriesComponent } from './list-series/list-series.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -20,7 +24,11 @@ import { DescripPipe } from '../pipes/descrip.pipe';
     ImgSuperPipe,
     HeaderComponent,
     CharactersDetailsComponent,
-    DescripPipe
+    DescripPipe,
+    ListComicsComponent,
+    CreatorPipe,
+    ListSeriesComponent,
+    SpinnerComponent
   ],
   exports: [
     CardCharacterComponent,

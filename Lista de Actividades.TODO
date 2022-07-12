@@ -17,11 +17,11 @@ CHARACTERS DETAILS PAGE:
 
   ✔ 2. As a user, I want to see the character description. If there is no description, I want to know that the description is not available. @done(11-07-2022 01:21)
 
-  ☐ 3. As a user, I want to see a list of the comics in which the character appears (with the cover, title, writer, the author of the cover and the price of the comic. If there is more than one writer, take the first one)
+  ✔ 3. As a user, I want to see a list of the comics in which the character appears (with the cover, title, writer, the author of the cover and the price of the comic. If there is more than one writer, take the first one) @done(11-07-2022 16:15)
 
   ☐ 4. As a user, I want to see all the comics about the character so I want to be linked to the comics list page pre-filtered with the comics of the character I’m watching
 
-  ☐ 5. As a user, I want to see about the character, the series in which appears (with the picture, title, starting year, ending year, type and rating of the serie)
+  ✔ 5. As a user, I want to see about the character, the series in which appears (with the picture, title, starting year, ending year, type and rating of the serie) @done(11-07-2022 18:27)
 
   ☐ 6. As a user, I want to see all the series about the character so I want to be linked to the series list page pre-filtered with the series of the character I’m watching.
 
