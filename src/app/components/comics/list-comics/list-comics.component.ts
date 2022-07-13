@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IComicResult } from '../../../interfaces/comics.interface';
 
 @Component({
@@ -18,6 +18,12 @@ export class ListComicsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void { }
+
+  onCharacter(): void {
+    if ((this.idCharacter > 0) && (this.descripVisible)) {
+      this.router.navigate(['/Character', this.idCharacter]);
+    }
+  }
 
   onAll(): void {
     this.router.navigate(['/Comics', this.idCharacter]);

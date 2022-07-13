@@ -1,3 +1,4 @@
+import { CFilterComics } from './../../../../class/FilterComics';
 import { IComicResult } from './../../../../interfaces/comics.interface';
 import { ComicsService } from './../../../../services/comics.service';
 import { Component, OnInit } from '@angular/core';
@@ -14,6 +15,7 @@ export class CharactersDetailsComponent implements OnInit {
 
   characterResult: ICharacterResult[] = [];
   comicResult: IComicResult[] = [];
+  filterComics = new CFilterComics();
 
   constructor(
     private router: Router,
@@ -24,13 +26,16 @@ export class CharactersDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = +this.activeRoute.snapshot.params['id'];
+    this.filterComics.idCharacter = id;
+    this.filterComics.title = '';
+    this.filterComics.limit = 4;
 
     this.charactersService.getCharacters('', id).subscribe(data => {
       this.characterResult.push(... data);
     });
 
     this.comicsService.setClearLoading();
-    this.comicsService.getComics(id, '', 4).subscribe(data => {
+    this.comicsService.getComics(this.filterComics).subscribe(data => {
       console.log(data);
 
       this.comicResult.push(... data);

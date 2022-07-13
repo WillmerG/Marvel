@@ -2,13 +2,13 @@
   <fieldset class="border border-gray-400 rounded-md p-2 flex flex-row">
     <legend class="text-gray-400 px-2">Order Price</legend>
     <div class="flex items-center mr-4">
-        <input id="default-radio-1" type="radio" [value]="true"  name="default-radio"
+        <input id="default-radio-1" type="radio" [value]="false"  name="default-radio"
         class="w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600"
         [(ngModel)]="filterComics.orderPrice"/>
         <label for="default-radio-1" class="ml-2 text-sm font-medium text-gray-400">Asc</label>
     </div>
     <div class="flex items-center">
-        <input checked id="default-radio-2"  type="radio" [value]="false" name="default-radio" class="w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600" [(ngModel)]="filterComics.orderPrice" default>
+        <input checked id="default-radio-2"  type="radio" [value]="true" name="default-radio" class="w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600" [(ngModel)]="filterComics.orderPrice" default>
         <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-400">Desc</label>
     </div>
   </fieldset>
@@ -16,14 +16,16 @@
   <fieldset class="border border-gray-400 rounded-md p-2 flex flex-row">
     <legend class="text-gray-400 px-2">Order Title</legend>
     <div class="flex items-center mr-4">
-        <input id="default-radio-3" type="radio" [value]="true"  name="default-radio2"
-        class="w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600"
-        [(ngModel)]="filterComics.orderTitle"/>
-        <label for="default-radio-3" class="ml-2 text-sm font-medium text-gray-400">Asc</label>
+        <input checked id="default-radio-4"  type="radio"
+          (click)="onOrderTitle()"
+          [value]="true" name="default-radio2" class="w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600"/>
+        <label for="default-radio-4" class="ml-2 text-sm font-medium text-gray-400">Asc</label>
     </div>
     <div class="flex items-center">
-        <input checked id="default-radio-4"  type="radio" [value]="false" name="default-radio2" class="w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600" [(ngModel)]="filterComics.orderTitle" default>
-        <label for="default-radio-4" class="ml-2 text-sm font-medium text-gray-400">Desc</label>
+        <input id="default-radio-3" type="radio" [value]="false"  name="default-radio2"
+        class="w-4 h-4 text-blue-600 focus:ring-blue-600 ring-offset-gray-800 focus:ring-2 bg-gray-700 border-gray-600"
+        (click)="onOrderTitle()" />
+        <label for="default-radio-3" class="ml-2 text-sm font-medium text-gray-400">Desc</label>
     </div>
   </fieldset>
 

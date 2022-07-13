@@ -34,7 +34,7 @@ COMICS LIST PAGE:
 
   ☐ 4. As a user, I want to order the list of comics by price (ascending or descending). @critical
 
-  ☐ 5. As a user, I want to order the list of comics by title (ascending or descending).
+  ✔ 5. As a user, I want to order the list of comics by title (ascending or descending). @done(13-07-2022 16:18)
 
   ☐ 6. As a user, I want to view the comics that groups several characters. So I want to be able to select a group of characters and view the comics in which all the characters I selected appear together. (Ex: Thor Iron Man and Hulk will show me the comics in which all those three characters appear)
 

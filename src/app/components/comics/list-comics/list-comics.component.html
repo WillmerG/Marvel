@@ -4,11 +4,11 @@
       <div class="sm:text-3xl text-2xl w-auto font-medium title-font text-white mb-0">
         List of Comics
       </div>
-      <button *ngIf="idCharacter > 0" class=" ml-2 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" (click)="onAll()">All</button>
+      <button *ngIf="!descripVisible" class=" ml-2 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" (click)="onAll()">All</button>
     </div>
     <div class="flex flex-wrap -m-4" *ngIf="comics.length > 0">
 
-      <div class="lg:w-1/4 sm:w-1/2 p-4" *ngFor="let comic of comics">
+      <div class="lg:w-1/4 sm:w-1/2 p-4" [ngClass]="{'cursor-pointer' : idCharacter > 0 && descripVisible}" *ngFor="let comic of comics" (click)="onCharacter()">
         <div class="flex relative">
           <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" [src]="comic.thumbnail.path | imgSuper:comic.thumbnail.extension">
           <div class="px-8 py-10 relative z-10 w-full h-96 border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-100">

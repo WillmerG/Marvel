@@ -22,7 +22,7 @@ export class ComicsComponent implements OnInit {
     const max = (document.documentElement.scrollHeight || document.body.scrollHeight);
 
     if ((pos > max) && (!this.comicsService.getLoading())) {
-      this.onRefresh(this.auxFilter);
+      this.onRefresh(this.auxFilter, true);
     }
   }
 
@@ -38,14 +38,14 @@ export class ComicsComponent implements OnInit {
     this.onRefresh(this.auxFilter);
   }
 
-  onRefresh(filter: CFilterComics): void {
-    if (this.auxFilter.title !== filter.title) {
+  onRefresh(filter: CFilterComics, swScroll: boolean = false): void {
+    if (!swScroll) {
       this.comicResult = [];
       this.comicsService.setClearLoading();
       this.auxFilter = filter;
     }
 
-    this.comicsService.getComics(this.auxFilter.idCharacter, this.auxFilter.title).subscribe(data => {
+    this.comicsService.getComics(this.auxFilter).subscribe(data => {
       this.comicResult.push(... data);
     });
   }
